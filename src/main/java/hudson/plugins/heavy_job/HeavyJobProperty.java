@@ -28,12 +28,15 @@ import hudson.model.AbstractProject;
 import hudson.model.JobProperty;
 import hudson.model.JobPropertyDescriptor;
 import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.export.ExportedBean;
 
 /**
  * Keeps track of the number of executors that need to be consumed for this job.
  *
  * @author Kohsuke Kawaguchi
  */
+
+@ExportedBean
 public class HeavyJobProperty extends JobProperty<AbstractProject<?,?>> {
     public final int weight;
 

@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.kohsuke.stapler.export.ExportedBean;
+
 @Extension
 public class HeavyJobSubTaskContributor extends SubTaskContributor {
 
@@ -44,6 +46,7 @@ public class HeavyJobSubTaskContributor extends SubTaskContributor {
         return r;
     }
 
+    @ExportedBean
     public static class ExecutableImpl implements Executable {
         private final SubTask parent;
         private final Executor executor = Executor.currentExecutor();
